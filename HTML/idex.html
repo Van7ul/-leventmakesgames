@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <style>
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  line-height: 1.6;
+  background-color: #F5EEDC;
+  color: #183B4E;
+  font-family: sans-serif;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #27548A;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 15px 0;
+  color: #DDA853;
+}
+
+section {
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #27548A;
+  color: #F5EEDC;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #27548A;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  background-color: #333;
+}
+
+.description {
+  max-width: 600px;
+  color: #F5EEDC;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px;
+  background-color: #27548A;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  border-radius: 15px;
+}
+
+.project-column {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #183B4E;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #F5EEDC;
+}
+
+.project-column img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-column {
+  position: relative; /* Required for absolutely positioning child */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #183B4E;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #F5EEDC;
+  overflow: visible; /* Allow content to overflow and overlap */
+}
+
+.project-details {
+  display: none;
+  position: absolute;
+  bottom: 10px; /* Show above bottom padding */
+  left: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #F5EEDC;
+  text-align: left;
+  padding: 10px;
+  background-color: #183B4E;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-column:hover .project-details {
+  display: block;
+  opacity: 1;
+}
+
+
+.about {
+  background-color: #27548A;
+  border-radius: 15px;
+  color: #F5EEDC;
+}
+
+.skills {
+  background-color: #27548A;
+  border-radius: 15px;
+  color: #F5EEDC;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #F5EEDC;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+.proficiency-dots {
+  display: flex;
+  justify-content: space-between;
+  width: 400px; /* Increased to accommodate larger dots and more spacing */
+  gap: 0;
+  margin-left: 20px; /* Add some space between icon and dots */
+}
+
+.proficiency-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #F5EEDC;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  margin: 0 5px; /* Added horizontal margin between dots */
+}
+
+.proficiency-dot.filled {
+  background-color: #DDA853;
+  opacity: 1;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap between icon and dots */
+  margin-bottom: 15px; /* Added vertical space between skill rows */
+}
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+    
+
+    <section class="intro">
+      <img src="images/profile.jpg" alt="Levent Cracea's photo" class="profile-photo" />
+      <div class="description">
+        <h1>Levent Cracea</h1>
+        <p>Game and System Designer and Developer, currently looking for internship opportunities in Game Design or Development.</p>
+        </div>
+    </section>
+
+    <section class="projects">
+      <div class="project-column" onclick="location.href='https://anachy.itch.io/i-need-to-finnish-this-game';">
+        <img src="images/INTFTG.png" alt="I Need To Finish This Game" />
+        <p>I Need To Finish This Game</p>
+        <div class="project-details">
+          <p>A meta-narrative walking sim, where I explored my insecurities and struggles with creating games in less than a week.</p>
+          <p>Role: Everything</p>
+          <p>Time: 1 week</p>
+        </div>
+      </div>
+      
+      <div class="project-column" onclick="location.href='https://anachy.itch.io/crane-wars';">
+        <img src="images/CraneWars.png" alt="Crane Wars" />
+        <p>Crane Wars</p>
+        <div class="project-details">
+        <p>Crane vs Crane action. Two-player local versus where you take control of a crane and have to whack the opponent's crane before they do.</p>
+        <p>Role: Everything</p>
+        <p>Time: 1 week</p>
+        </div>
+      </div>
+    
+      <div class="project-column" onclick="location.href='https://anachy.itch.io/red-exit';">
+        <img src="images/REDEXIT.png" alt="Red Exit" />
+        <p>Red Exit</p>
+        <div class="project-details">
+          <p>Atmospheric experience inspired by Iulia Grigoriu's performance on the island of Spiekeroog in the northwest of Germany.</p>
+          <p>Role: Everything</p>
+          <p>Time: 1 week</p>
+        </div>
+      </div>
+    
+      <div class="project-column" onclick="location.href='https://lethalcassettes.itch.io/soid';">
+        <img src="images/SOID.png" alt="SOID" />
+        <p>SOID</p>
+        <div class="project-details">
+          <p>A homemade almost-oscilloscope where you can change individual parameters of the graph curve.</p>
+          <p>Role: Main Coder/Developer</p>
+          <p>Time: 1 week</p>
+          
+        </div>
+      </div>
+    
+      <div class="project-column" onclick="location.href='https://anachy.itch.io/then-next-comes';">
+        <img src="images/ThenNextComes.png" alt="Then Next Comes" />
+        <p>Then Next Comes</p>
+        <div class="project-details">
+          <p>Dialogue-driven experience exploring grief, memory, and choices in a surreal environment. First time doing branching dialogue options.</p>
+          <p>Role: Everything</p>
+          <p>Time: 1 week</p>
+          
+        </div>
+      </div>
+    
+      <div class="project-column" onclick="location.href='https://anachy.itch.io/crane-toys';">
+        <img src="images/CraneToys.png" alt="Crane Toys" />
+        <p>Crane Toys</p>
+        <div class="project-details">
+        <p>Tried to transform Crane Wars from a PvP experience into a sandbox toy-style experience. Still needs a bit of love, but my life was saturated with cranes and I had to take a break from that.</p>
+        <p>Role: Everything</p>
+        <p>Time: 1 month</p>
+      </div>
+      </div>
+    
+      
+    
+      <div class="project-column" onclick="location.href='https://taboulait.itch.io/garden-goofs';">
+        <img src="images/GardenGoofs.png" alt="Garden Goofs" />
+        <p>Garden Goofs</p>
+        <div class="project-details">
+          <p>Garden murder mystery. One of the first projects I worked on.</p>
+          <p>Role: Sound and Effects Designer</p>
+          <p>Time: 1 month</p>
+        </div>
+      </div>
+      
+      <div class="project-column" onclick="location.href='https://anachy.itch.io/web-of-nightm';">
+        <img src="images/Web.png" alt="Web Of Nightmares" />
+        <p>Web of Nightmares</p>
+        <div class="project-details">
+          <p>Climb the spider web to save your life and sanity.</p>
+          <p>Role: Game and Sound Design</p>
+          <p>Time: 1 month</p>
+        </div>
+      </div>
+
+    </section>
+    
+    
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Game Designer and Developer, focusing on System Design and Implementation. My main focus has been on the interplay between mechanics and narrative, and how one can support the other. I have a special interest in making the player confront their biases when it comes to sensitive subjects.</p>
+
+     <p>With years of experience in hosting and organizing game-related events—from small-scale tournaments to larger industry and community events—I bring a deep understanding of both the creative and communal aspects of games.</p>
+
+
+
+    </section>
+    
+    <section class="skills">
+      <h2>Character Sheet:</h2>
+    
+      <div class="skill-row">
+        <img src="images/unity.png" alt="Unity Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+      <div class="skill-row">
+        <img src="images/godot.png" alt="Godot Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+      <div class="skill-row">
+        <img src="images/unreal.png" alt="Unreal Engine Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+      <div class="skill-row">
+        <img src="images/code.png" alt="Programming Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+      <div class="skill-row">
+        <img src="images/blender.png" alt="Blender Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+      <div class="skill-row">
+        <img src="images/photo.png" alt="Photoshop Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+      <div class="skill-row">
+        <img src="images/au.png" alt="Audio Editing Icon" class="skill-icon" />
+        <div class="proficiency-dots">
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot filled"></div>
+          <div class="proficiency-dot"></div>
+          <div class="proficiency-dot"></div>
+        </div>
+      </div>
+    
+    </section>
+    
+    
+  </body>
+</html>
